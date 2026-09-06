@@ -12,11 +12,11 @@ parts on a bench.
 
 ## Read this first — what Horizons actually becomes
 
-The old repo is **not a UI donor.** The UI gets rebuilt from scratch (Flutter, or
-Genie app builder with Jetpack Compose + Material 3, every tile Material 3 once
-opened). The old structure isn't the final UI either.
+Two different things come out of this, and they are **not** the same app.
 
-What the old APK becomes is the **on-device backend daemon**:
+### 1. The daemon APK — has its own UI, is not headless
+
+What the old APK turns into:
 
 - NPU manager daemon / backend
 - UNIX-socket terminal access (replacing the old ADB debug loopback)
@@ -24,8 +24,23 @@ What the old APK becomes is the **on-device backend daemon**:
 - Possibly the MCP server itself
 - Possibly model loading
 
-So this folder is sorted by **where each piece is going**, not by where it came
-from.
+**And its own front end:** a terminal UI, a chat interface, settings, and an
+about/build page. Not fully specced yet. So this APK is a real app with a real
+UI — just a utilitarian one, scoped to running and inspecting the daemon.
+
+### 2. The Horizons UI — rebuilt from scratch, separately
+
+The designed product UI. Flutter, or Genie app builder with Jetpack Compose +
+Material 3 (every tile Material 3 once opened). The old structure is **not** the
+final structure and doesn't carry over.
+
+**Consequence for this folder:** the Compose in `04-ui-reference/` splits two
+ways. `TerminalPanel`, `ChatPane` and `SettingsPane` map onto the daemon APK's
+own UI and are directly useful there. `HomeGrid`, the tile system, and the
+visual identity belong to the separate Horizons rebuild, which starts from
+`01-design/` rather than from that code.
+
+This folder is sorted by **where each piece is going**, not by where it came from.
 
 ---
 
@@ -36,7 +51,7 @@ from.
 | `01-design/` | `HOME-REDESIGN-SPEC.md`, 24 reference images, 2 device screenshots | **The UI rebuild** — framework-agnostic. Works whether the target is Flutter or Compose. |
 | `02-specs/` | Router/Monitor/Terminal spec, feature spec, GenieX daemon plan, failure ledger | **The reasoning.** Keep the thinking, drop the implementation. |
 | `03-backend-source/` | Kotlin that maps onto the daemon APK | **The backend.** See breakdown below. |
-| `04-ui-reference/` | The Compose UI, ~6,900 lines | **Reference only — do not port.** This is the design made concrete, useful for seeing what the spec produced. The rebuild starts from `01-design/`, not from here. |
+| `04-ui-reference/` | The Compose UI, ~6,900 lines | **Splits two ways.** `TerminalPanel` (1,079), `ChatPane` (610), `SettingsPane` (832) map onto the daemon APK's own UI — directly useful. `HomeGrid` (1,394), `PaneBackgrounds`, `Screensaver`, `HorizonsTheme` and the tile system belong to the separate Horizons rebuild, which starts from `01-design/` rather than this code. Already on Material 3 (`androidx.compose.material3`), so tokens and component choices port to a Compose target; only the spec and images port to Flutter. |
 | `05-provenance/` | Source commit SHA | — |
 
 ### `03-backend-source/` breakdown
