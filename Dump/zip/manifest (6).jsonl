@@ -1,0 +1,13 @@
+{"path": "MAP.md", "type": "navigation", "tier": 0}
+{"path": "manifest.jsonl", "type": "catalog", "tier": 0}
+{"path": "README.md", "type": "documentation", "tier": 0}
+{"path": "AGENTS.md", "type": "policy", "tier": 0}
+{"path": "RESUME.md", "type": "state", "tier": 0}
+{"path": "chunk.jsonl", "type": "rag_cache", "tier": 3}
+{"path": "raw/", "type": "raw_bucket", "tier": 1}
+{"path": "clean_md/", "type": "condensed_markdown", "tier": 1}
+{"path": "wiki_md/", "type": "living_wiki", "tier": 2}
+{"path": "skills/", "type": "procedural_skills", "tier": 4}
+{"path": "tools/", "type": "executable_tools", "tier": 4}
+{"path": "pending/", "type": "backlog", "tier": 5}
+{"path": "audit/", "type": "telemetry_logs", "tier": 5}

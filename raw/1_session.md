@@ -1,0 +1,7 @@
+﻿Yes, this is that exact session.
+In our earlier exchange:
+1. Your Pushback: You pointed out that your device runs a 64-bit octa-core processor (Snapdragon 8 Elite) with 16GB of RAM, and questioned why memory would be constrained to 3.5GB when Qualcomm advertises running large models (like 20B parameters) on the NPU.
+2. The Hexagon HTP Distinction: We clarified that the 3.5GB ceiling isn't an SoC or device RAM limit—the Oryon CPU accesses all 16GB. Instead, it is a constraint of the Hexagon DSP/NPU subsystem's FastRPC / QuRT User Process Domain (uPD) virtual address space per session.
+3. How the Split Works: We discussed how models larger than 3.5GB (like the Qwen 3.5 9B Q4_0 at ~5.5GB–6GB or Gemma 12B) bypass that single-session ceiling:
+   * Multi-Device Virtualization: Splitting layers across virtual NPU domains (e.g., D=HTP0,HTP1 in llama.cpp), where HTP0 processes layers 0–24 and pipes intermediate tensors via internal hardware RPC to HTP1 for layers 25–48.
+   * Dynamic DMA Chunking: In QAIRT and Qualcomm's GENIE runtime, streaming context chunks and layer weights directly through DMA into local cache rather than pinning the entire model into a single static memory allocation.

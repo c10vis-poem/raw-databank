@@ -1,0 +1,6 @@
+---
+source: CCConvo/Well I would.txt
+cleaned: 2026-08-26
+converter: none - plain text
+---
+Well I would say that for the functions that it covers Aesop XI as a harness would include that not not compete with it if that makes any sense like for what prime agent does that would be ASAP excise protocol you know what I mean it uses Prime agent to do blank using blank and then for other shit like my script training it could be you know ASAP uses X to do why following Z's methodology or something like that and getting back to the harness thing yeah I thought and I've seen it defined as either or and then also both together and then also that hard layer underneath that you were talking about so I kind of hurt it defined as all three to me it either makes the most sense to have the two actually be referred to as one like the the context tools and then I mean the contacts and the function calls and the tools and then all of the prompts and memories and skills it would kind of you know they use them together right that would make sense to be the harness with the underlying layer underneath it or the underlying layer underneath it itself so if I made Aesop and consistent underlying layer underneath all of these different formats and tools and protocols and everything like that would be the harness right or or is there another terminology for it

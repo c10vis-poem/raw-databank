@@ -1,0 +1,19 @@
+# Session Handoff for Tasker Screen Reader Project
+
+**Goal:** Create a custom, toggleable screen reader in Tasker that reads on-screen text aloud, excluding text from the user's STT service and keyboard.
+
+**Critical Information (Verified via Screenshots):**
+- **TTS Service (Voice):** `com.CodeBySonu.VoxSherpa`
+- **STT Service (Listener):** `com.google.android.tts`
+- **Keyboard (Input):** `com.google.android.inputmethod.latin`
+
+**Project Status:**
+- The final, correct A-to-Z instructions for manual setup in Tasker have been provided.
+- An XML project file (`ScreenReader.prj.xml`) was generated to automate the setup via import.
+- The CLI agent (Gemini) failed repeatedly to create this file on the user's file system with its `write_file` tool.
+- The final plan is for the user to manually create `ScreenReader.prj.xml` using the XML content provided, and then import it into Tasker.
+
+**User Context:** The user is extremely frustrated due to multiple failures and incorrect instructions from the previous AI model (Gemini). It is critical to be accurate, direct, and not repeat past mistakes.
+
+**Next Step for New Model:**
+The user has the A-to-Z instructions and the XML content. The next logical step is to guide them through the manual creation of the `.xml` file and the Tasker import process, if they still require assistance.

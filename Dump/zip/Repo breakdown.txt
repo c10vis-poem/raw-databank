@@ -1,0 +1,237 @@
+﻿OB1 memory protocol 
+
+
+PM C L A U D E SKILLS I don't know if I'm using that it might be enough of that packed in ECC 
+
+
+Nova REVERSE SKILL is the new engineering skill that's looks really thorough and promising it reads very very well 
+
+
+ LLAMA CPP 
+
+
+GRAPHIFY skill 
+
+
+QWEN CODE 
+
+
+And this is one of my sleepers that are pretty fucking deep it's going to take a while to get into but this one is Mark Tech post 
+AI AGENTS PROTOCOLS TUTORIALS this thing is fucking deep and sprawling can't wait to get into the Weeds on that one 
+
+
+Of course I got my PRIME AGENT FROM PRIME INTELLECT I'll be running 
+
+
+Here's another sleeper from Nate B Jones UNLOCK AI WORKBENCh powered by t3 code with a bundled ring with a bundled ringer run time 
+
+
+I have a buttload of NATE B JONES TRANSCRIPTS I think every day so my AI scraper can get some of that action 
+
+
+Next one's called 
+R-TK 
+which is a token killer but I don't know if I'm going to need it it says it's pretty it's usually for rust but it looks pretty efficient but man I got Omni route and I'm going to do a Honey I shrunk the AI plus all the other stuff I have 
+
+
+I have SPEECH TO SPEECH forked 
+
+
+And I got the BROWSER USE SKILL e but I think I'm going to utilize that with my PERPLEXITY CLI and maybe use the perplexity I think it's called for web viewing so it's unbiased you know 
+
+
+Now here's one that I was trying to figure out open ship I'm definitely it's all one word OPENSHIP 
+I think this one is going to be housed in my APK 
+
+
+DROID DESK is the one that I'm running right now and termucks I'm going to utilize that for desktop functions and capabilities between my phone and my tablet 
+
+
+PI agent harness was another one that I was thinking of but I'm pretty sure that prime agent replaces that 
+
+
+TMUX source code repo 
+
+
+I got the VIA browser but I'd really rather emulate or copy something like CROMITE or soul SOUL is my favorite if it had a little bit better resolution didn't look so fucking hazy it's options are second to none 
+
+
+ ANYTHING LLM 
+but honestly most of their shit's just made for desktop I don't know it's really going to be useful to me I know they're turbo quant infrastructure is pretty cool 
+
+
+ LINUX KERNEL for qli main line repo called kernel and I have a cotlin-sdk for model contacts protocol servers and clients maintained and collaboration with jetbrains fork repo 
+
+
+TMUX ASSISTANT RESURRECT REPO 
+
+
+UNSLOTH LOCAL UI for training and running Gemma for Quinn 3.6 deep sink Kimmy glm and other models perhaps this UI will be where my red audit or my scripting agent besides 
+
+
+Yeah my scripting in log editor will probably utilize that because I right after it I have
+
+
+ GENERATIVE AI REPO 
+which is sample code and notebooks for generative AI on Google cloud with Gemini Enterprise agent platform literally what I have the credits to build on Jupiter notebook is what it uses 
+
+
+The MEM0 REPO universal memory layer that I'm using 
+
+
+GITHUB MCP REPO
+
+
+  GENIEX REPO pretty sure that has the SDK path in it that's already on my device anyway 
+
+
+LANGFLOW repo that might be interesting I don't know if I need to utilize that right now maybe it's Lane flow with the w Lang flow one word Lane flow fuck dude this voice thing sucks ass l a n g f l o w 
+
+
+CREW AI another framework orchestrating role-playing autonomous AI agents maybe for large coding jobs I don't know we'll see perhaps I could be the whole schema when I get home 
+
+
+AI AGENT BOOK that's just a knowledge base for empirical data 
+
+
+Now here's the ones the ORCA for fleet of parallel agents I don't know that might be good at home then I have the clod framework but I'm pretty sure ECC replaces it 
+
+
+I have FIRECRAWL but I'm going to use WEB CRAWL AI I believe which is a non-pay service that is the same exact thing without being charged for it and then 
+
+
+ LOCAL AI 
+The open source AI engine run any model on any hardware I think I'm going to use that in conjunction with the other one I mentioned OPENSHIP
+
+
+Oh I got the world monitor repo that's going to be badass for web scraping for my daily logs 
+
+
+HONEY FOR DEVS which looks like it's an improved version of Honey I shrunk the AI and Honey I shrunk the AI is an improved version of the combination of ponytail and caveman that's definitely getting used 
+
+
+ matt pocock SKILLS
+
+
+FABRIC this might also be something that I utilize at home 
+
+
+LLM HUB I swear to God if Claude can't figure out this voice stack and terminal agent I'm going to have to force it to reverse engineer this thing this basically has almost every aspect of what I want to build well I should say every aspect of this is something that I want to build that's more accurate because there's other things that I have planned as well but this is a sterling example of how you could take something I almost identical to what I'm putting together and make it both opens source and a paid application at the same time 
+
+
+CODE REVIEW GRAPH Ihe other aspect of the graph on graph memory or graph to graph GTG I think it's called supposed to be so your models don't lose track of your contacts to be repos and stuff 
+
+
+OPENINTERPRETER this thing looks like it has the potential for being a powerhouse to run Kimmy qwbn and glm etc models 
+
+
+Crawl4AI
+
+
+Claude skills this is the big giant one 245 I also have like the super cloud and the p.m. Claude and what is it called best practices and the clawed Android reverse engineering one I'm pretty sure with everything that I have as far as the reverse skill that I'm already going to use and the pococ stuff and all of the other harness MCPE etc I doubt I'm going to need too many of those plus by now clouds brightest said fuck it and put most of them or anthropics probably said fucking put most of them inside anyway 
+
+
+SILERO VAD
+
+
+MLC LLM AND SHERPA ONNX
+
+
+DOCKER PKG BUILD
+
+
+Omni route 
+
+
+QCOM BUILD UTILS Linux utilities or Qualcomm utilities for Linux builds probably come in handy 
+
+
+Off grid ai mobile another proprietary well it's a paid sandboxed version of what I want to build it's probably the second best thing I've seen out there 
+
+
+LLM-WIKI 
+
+
+MODERN WEB GUIDANCE SRC 
+
+
+Q A I HUB MODELS 
+
+
+REASONING BANK 
+
+
+KOKORO ONNX 
+
+
+CC ANDROID THAT'S WHAT I'M RUNNING ON MY TMUX 
+
+
+RINGER 
+
+
+Obsidian skills 
+
+
+ OPENWIKI 
+
+
+I got terrestrial brain and open Brain which are different variations of ob1 
+
+
+Clean my AI harness I've already used it with Claude And I think it actually helped 
+
+
+Genymotion device web player and scry just for reverse engineering and research purposes 
+
+
+CLAUDE VIDEO for giving it the ability to watch any video and actually extract frames and utilize the data
+
+
+G E N A I FOR DEVELOPERS 
+Exactly what my cloud Google project $1,000 credits will be utilized with 
+
+
+Colonel dash topics teach or no tectopic branches for qli main line 
+
+
+And I got like a turmox GUI batch library I got snagbook recovery and reflashing tool for embedded platforms your trusted firmware is Qualcomm upstream staging repo for trusted firmware a and got open skills of refactored one page refractor navigation site for Nate B Jones open skills library styled with an imported anthropic design system 
+Definitely worth looking at and digging into 
+
+
+Something for running Snapdragon npu for older versions 
+
+
+AI hub apps the Qualcomm AI hub apps Claude Android skill in the guard you read that one that's your way I got two versions of it but it's the same damn thing 
+
+
+Aider 
+
+
+EDGE OVERLAY AI another websocket example of something that's that has something that I'm going to be building 
+I have their full repo PDF pretty good read 
+Same with off-grid AI and the genie scissorpe stuff 
+
+
+Quinn 3 audiobook converter 
+
+
+ADK-DOCS forked from Google's version deploying sophisticated AI agents 
+
+
+Magisk also has something that I could utilize 
+
+
+ WHISPER KIT ANDROID 
+
+
+L E J PERPLEXITY POWERED SEARCH FOR CLAUDE 
+
+
+MAMA CPP-NPU 
+
+
+MOONSHINE T FLIGHT
+
+
+FAKESTEAK that's the badass Matrix background that I want to use in one of my desktop or actually one of my terminal environments I mean

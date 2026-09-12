@@ -1,0 +1,22 @@
+---
+source: CCConvo/I can't reach.txt
+cleaned: 2026-08-26
+converter: none - plain text
+---
+I can't reach the tablet directly — I'm running in the phone's Termux shell right now, so anything I execute only touches this device. You'll need to run these on the tablet yourself and paste the output back to me.
+
+**Step 1 — check if it's actually the same crash bug I just hit on this phone, not an account problem at all.** "Failed to recognize command, launching API shit" sounds exactly like the `preload not found` crash — this exact bug is already flagged in tonight's handoff: the `claude` binary breaks when launched from anywhere other than `$HOME`. On the tablet, run:
+
+```
+cd ~ && /data/data/com.termux/files/usr/bin/claude auth status
+```
+
+If that suddenly gives you a real response instead of erroring, the "access denied" you were seeing was this crash wearing a confusing error message, not a genuine permissions problem. Tell me what it prints either way.
+
+**Step 2 — if it does run cleanly, don't touch login yet, look first.** Per what's already been learned about this exact failure mode on this account setup: the CLI is very often already correct, and "wrong account" turns out to be a browser cookie problem, not a CLI problem. The status output will show `oauthAccount.emailAddress` — read that back to me before we assume anything's actually broken.
+
+**Step 3 — if it genuinely is denying you as the admin of your own business account,** that's worth taking seriously as a real possibility, not just a bug: Claude for Work/Enterprise sometimes has an org-level policy toggle for which client surfaces (web vs. API vs. Claude Code CLI) members can use, separate from billing ownership — being the owner doesn't automatically mean every surface is enabled. That's something to check in the actual admin console at claude.ai/settings, not something I can fix from a terminal.
+
+**Step 4 — if it's the wrong-account browser thing specifically** (this has happened before, per what's already been diagnosed): open `https://claude.ai/logout` on the tablet, reload, and if it still lands on the work account, it's Chrome auto-picking your work Google profile — use the account chooser explicitly or a private tab.
+
+Run step 1 first and tell me exactly what comes back — that determines which of the rest actually applies.

@@ -1,0 +1,49 @@
+Alternative Setup (The "Plugin" Route)
+If you prefer a standalone desktop software experience over a web UI, you can pair a command-line
+agent like Claude Code with the green-dalii/obsidian-llm-wiki Plugin.
+You use the CLI to let the AI agent modify and update your notes.
+You open the Obsidian Desktop App to visually view, browse, and manually edit the
+interconnected wiki pages.
+Would you like help with the terminal commands to install and clone the dual CLI/App
+repository, or do you need help configuring the prompt instructions for your AI agent?
+GitHub +1
+GitHub
+GitHub
+green-
+dalii/ob…
+... Karpathy
+LLM Wiki…
+GitHub
+GitHub -
+Pratiyush/llm-…
+What setup does *
+Creates raw/ , wiki/ ,…
+GitHub
+lucasastor
+Open…
+LLM Wiki
+features…
+GitHub
+LLM Wiki -
+GitHub…
+At some
+point you…
+GitHub
+That is my mistake. I completely missed that and was focusing way too much on the code side of
+things. Since you are working entirely on mobile, running local terminal environments and desktop
+clients is completely out of the picture.
+You can absolutely still build and manage an LLM Wiki entirely from your phone.
+How to Run an LLM Wiki on Mobile
+Instead of running local scripts, you rely on mobile-friendly cloud storage and your favorite AI chat
+app.
+The Storage (Your Wiki): Use a cloud-based markdown notes app with a great mobile interface.
+Obsidian is free on iOS and Android, syncs via iCloud/Google Drive, and supports the exact same
+interlinked markdown files.
+1:51AM
+We should know by now that I don't
+have a fucking computer, so there's …
+AI Mode All Images Videos News Maps Shopping Books Flights Finance The AI (Your Engine): You can use standard AI apps like Claude or ChatGPT as your wiki editor.
+The Mobile Workflow
+1. Set Up a Mobile Folder: Create a dedicated folder in your mobile notes app (like Obsidian or even
+just mobile folders for text files).
+2. Feed the AI: Copy-paste your raw notes, article li

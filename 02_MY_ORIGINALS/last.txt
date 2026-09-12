@@ -1,0 +1,71 @@
+Step 1: The Canonical Repository Skeletons & Mirror Package
+Archive: NovAeXorpus_Complete_Mirrors.zip
+
+Framing & Topology:
+
+novae-xorpus: Framed as the master core containing:
+
+The 18-Branch Living Wiki (02_wiki_md/): vendors/ (Google, Qualcomm, Nvidia, GitHub, Anthropic, PrimeIntellect, DeepSeek), weights/, runtimes/, engines/, harnesses/, agents/, protocols/, scripts/, tools/, skills/, projects/, entities/, architectures/, memory-subsystem/, runbooks/, references/, operator-log/, and indexes/.
+
+#d.u.m.b.a.s.s. Core (_dumbass_universal_memory/): sqlite/, postgres/, mem0/, ob1_protocol/, omniroute/, reasoning_bank/, and continual_harness/.
+
+The 5+1 Cognitive Tiers: 01_raw_sources/, 02_wiki_md/, 03_recall_cache/, 04_skills_runtime/, 05_episodic_logs/, plus root MAP.md and manifest.jsonl.
+
+The 6 Paired Repositories:
+
+novus-aexenti: dual_agent_router/, mem0_episodic/ (with ob1_static_protocols/), reasoning_bank/ (failure_logs/, reward_variables/, post_regression/), and nope_databank/.
+
+novaexopia: openwiki-tui-harness/, the 8 modular swarm harnesses (ecc-edge-compute/, prime-agent/, ringer-notif-loop/, hermes-soul/, aider-workspace/, local-nanobots/, smol-agents/, turbo-quant-swarms/), and mcp_connectors/.
+
+aesop-xi: arbitration/ and policies/.
+
+horizons-ui: model_loaders/, ui_tiles/, connectivity/, and webview/.
+
+novus-aesc: laptop_trick_tunnel/, npu_watchdog/, and scripts/.
+
+novus-aeyre: screen_vision/ and voice_ast_stack/.
+
+Each repo contains universal subfolders (raw/, clean_md/, wiki_md/, skills/, tools/, pending/, audit/) and standard control files (MAP.md, manifest.jsonl, README.md, AGENTS.md, RESUME.md, chunk.jsonl).
+
+Step 2: Master Compilation Execution Plan & Handoff Protocol
+Document: MASTER_COMPILATION_EXECUTION_PLAN_AND_HANDOFF.md
+
+Operational Invariants Codified:
+
+Non-1:1 Condensation Law: Strip conversational filler and duplicate boilerplate, but maintain 100% build fidelity so that raw and clean markdown build the exact same output.
+
+Cross Agent Auditor Stealth Invariant: Excluded from all public manifests and trees, living strictly in isolated ~/.red/.
+
+Locality of Reference: Skills and tools live locally where they are applied.
+
+The First-Move Directive: Read MAP.md (orient) ➔ Read tier MAP.md (focus) ➔ Query manifest.jsonl (stream/filter) ➔ Load targeted files only.
+
+Hard Rule 5 (Extractor Independence): Ingestion passes must be verified by corpus-verify (tools/check.py) using disjoint extractors (pypdf, zipfile+xml.etree, html.parser).
+
+The 4-Phase Workflow:
+
+Phase 1: Normalization & dual extraction (raw/ ➔ clean_md/, skills/, tools/).
+
+Phase 2: Independent RLVR validation (clean_md/ ➔ audit/).
+
+Phase 3: Pre-tokenized chunking and SHA-256 manifest cataloging (clean_md/ ➔ chunk.jsonl, manifest.jsonl).
+
+Phase 4: 18-branch Living Wiki population with bidirectional [[wikilinks]].
+
+Copy-Paste Resume Prompt for the Next Session
+
+MASTER_COMPILATION_EXECUTION_PLAN_AND_HANDOFF.md
+Created Sep 7
+Open
+Markdown
+RESUME INSTRUCTION:
+Continue execution on Project NovÆxorpus living canon compilation.
+1. Reference MASTER_COMPILATION_EXECUTION_PLAN_AND_HANDOFF.md and NovAeXorpus_Complete_Mirrors.zip in Secure-Spark-Proof-Folder / 01_MASTER_MIRROR_GLIDE.
+2. The 7 canonical repository skeletons (novae-xorpus, novus-aexenti, novaexopia, aesop-xi, horizons-ui, novus-aesc, novus-aeyre) are staged.
+3. Execute Phase 1 (Ingestion & Normalization) on the raw files in 02_MY_ORIGINALS:
+   - Convert raw inputs to clean Markdown with YAML frontmatter.
+   - Extract procedural heuristics to skills/ and executable scripts to tools/.
+   - Enforce the Non-1:1 Condensation Law (preserve 100% build context, eliminate conversational fat).
+4. Run corpus-verify (tools/check.py) per Hard Rule 5 for independent RLVR validation before committing.
+5. Populate the 18-branch Living Wiki in novae-xorpus/02_wiki_md/ and index in manifest.jsonl.
+Strict Invariant: The Cross Agent Auditor lives exclusively in ~/.red/ and must never appear in repository manifests or trees.

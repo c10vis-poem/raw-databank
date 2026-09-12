@@ -1,0 +1,12 @@
+Found the actual official signage — a real table, not my approximation. This corrects real things across what I've built tonight:
+
+| Layer | Repo Name | Branding / Symbolism |
+|---|---|---|
+| Presentation | `horizons-ui` | Horizons UI™ — *the ever-expanding canopy* |
+| Execution | `novaecopia-core` | **NovÆcopia** — *the abundance of the system* |
+| Protocol | `aesop-xi-protocol` | **Æsop-Xi** — *the tactical, narrative logic* |
+| Data Core | `nova-corpus` | **NovÆ-Corpus** — *the trunk/body of knowledge* |
+
+Plus the tree metaphor: `nova-corpus` is the Trunk, `aesop-xi-protocol` + `novaecopia-core` are the Roots, `horizons-ui` is the Leaves and Sky.
+
+Two real corrections this surfaces: I've been writing "AESOP XI" and "NovA-Corpus" without the Æ ligature throughout, and **I never accounted for `NovÆcopia`/`novaecopia-core` as its own layer at all** — that "novaecopia" folder from the Drive consolidation wasn't a stray addition, it's the official Execution repo. Updating the roadmap now.

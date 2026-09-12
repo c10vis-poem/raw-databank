@@ -1,0 +1,13 @@
+This changes the picture — it's more than a local-weights adapter.
+
+**What it actually is:** a single engine that runs *any modality* — LLM, vision, voice, image, video — behind one API. It doesn't bundle every backend at once; each one (llama.cpp, vLLM, whisper.cpp, stable-diffusion, MLX...) is a separate on-demand image, pulled only when a model needs it. So it stays lean instead of shipping everything whether you use it or not.
+
+**Three things directly relevant to what you're building:**
+
+**1. It speaks OpenAI *and* Anthropic API format natively.** Not just "OpenAI-compatible" — actual Anthropic-shaped endpoints too. That means Prime Agent, or anything else in your stack expecting to talk to Claude's API shape, can point at LocalAI and get your local weights back without any translation layer in between.
+
+**2. It has built-in agents with tool use, RAG, and MCP support already.** That's not just a model server — it's a lightweight agent runtime in its own right, with MCP as a first-class citizen. Which means it could sit in your stack as *both* a Layer A component (serving local weights) *and* have a foot in Layer B (basic agent/tool execution) without you building that bridge yourself.
+
+**3. Any hardware, explicitly including Apple Silicon and CPU-only** — no GPU required. Given your target is three on-device APKs on Snapdragon NPU hardware, that's the actual reason this is worth your attention: it's built to run where phones run, not just workstations.
+
+So the honest revision to the stack diagram: LocalAI isn't just "the thing that exposes your weights." It's the one piece touching almost every layer at once — it's the Layer A inference engine, it natively speaks both API shapes your other tools expect, and it already has MCP and agent/tool-use wired in, which is exactly the connective tissue you'd otherwise have to build by hand to get all three APKs talking to the same local model through the same interface.

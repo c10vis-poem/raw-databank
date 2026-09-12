@@ -1,0 +1,8 @@
+---
+source: CCConvo/Glad it landed.txt
+cleaned: 2026-08-26
+converter: none - plain text
+---
+Glad it landed — and the name genuinely does encode it: "Split Operations" is the routing/orchestration job itself, right there in the acronym. Makes sense you kept getting inconsistent definitions elsewhere; "harness" is used loosely enough in this space that most explanations collapse the distinction you're actually building around.
+
+One thing worth flagging before it propagates wrong: the Aug 10 handoff has it as **"Agentic Executions Split Operations Protocol"** — you just said **"Agentic Edge Split Operations Protocol."** Different word. Which one's right? I'll fix the memory/handoff record to match whichever you confirm, rather than leave two versions floating.

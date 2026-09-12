@@ -1,0 +1,10 @@
+59cd902dc0bc755821814c163ab0b90bc7c28c79837d009ada2bfc5947054728  1. Well I need to plan all this shit for later This....pdf
+d5ab235ccbaef1306c9fc49e973930bce12645ac6b6eb8c07d6316afaa6b93a7  Mapping Runtimes and CLIs -!DOCTYPE.txt
+56eb031970c719950a77eec89b74c8127506209d1d2cfe466134d534d7b7e321  Setting up a local shared memory layer.pdf
+7a7bcfd0303f978e12af33b8783469aad1e819de50d01edc0f945ca5a895ad8c  Starting Point-.pdf
+df1e9a8779ef8326e9e5d6537cbab1c13d829b855578e54d1950e05419c271e1  The Architecture- How Data Moves.pdf
+7df1f9c02e8615ae2678541e9129429c15410638970895a04e4dfeff7a567995  URL's-MEMORY LAYER .docx
+2b60fff6645f052c7b42b825f302b63d8eaed18857258cb303c18592a36ce657  Yeah, you're familiar with the open source memory layer, right- The MemO repo..pdf
+52d9ee201a2ff7abd95feada01eec47eb26cea31d4f4892624726fd370612702  agent_panel.sh.docx
+65cc472f7b05e6372dfa4fe3c6a9a7127c2ca241e2ed6c59b84b410000320d13  both.docx
+2255a029c015c1401b4f409817e9c561957c96c1bdaa1d8fb6b1d69576716e3f  TRAINING/failure_log_template.md.pdf

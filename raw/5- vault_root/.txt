@@ -1,0 +1,39 @@
+📦 vault_root/
+ ├── 📜 MAP.md                           # ⚪ [METACOGNITIVE] Master human ontology & cross-tier map
+ ├── 📊 manifest.jsonl                   # ⚪ [METACOGNITIVE] Global RAG catalog, sha256 hashes & index
+ │
+ ├── 📁 01_raw_sources/                  # 🟢 [TIER 1: COLD ARCHIVE] Immutable sensory ground truth
+ │   ├── 📊 manifest.jsonl               #   ├── Local RAG catalog of all raw assets & provenance
+ │   ├── 📑 pdf/                         #   ├── Source research papers, whitepapers, manuals
+ │   ├── 🎬 media/                       #   ├── Raw video lectures, audio memos, screen recordings
+ │   └── 📝 text/                        #   └── Web scrapes, raw transcripts, raw API payload dumps
+ │
+ ├── 📁 02_wiki_md/                      # 🟣 [TIER 2: THE LLM WIKI] Semantic Memory (OpenWiki TUI)
+ │   ├── 📊 manifest.jsonl               #   ├── Local RAG catalog of conceptual nodes & graph links
+ │   ├── 💡 concepts/                    #   ├── Atomic markdown notes (Zettelkasten / topic cards)
+ │   ├── 🏛️ architectures/               #   ├── System blueprints, data contracts, interface specs
+ │   ├── 🏷️ entities/                    #   ├── Schemas, hardware registers, device profiles
+ │   └── 🧭 indexes/                     #   └── Maps of Content (MOCs) & taxonomy graph hubs
+ │
+ ├── 📁 03_recall_cache/                 # 🟡 [TIER 3: RECALL CACHE] Working Memory Accelerator
+ │   ├── 📊 manifest.jsonl               #   ├── Local RAG catalog of vector & chunk shards
+ │   ├── ⚡ jsonl/                       #   ├── Pre-tokenized chunks for low-latency context injection
+ │   ├── 📐 vectors/                     #   ├── Dense embedding indices (FAISS / Chroma / HNSW)
+ │   └── 🗝️ kv_store/                    #   └── Key-value tables for fast exact-match lookups
+ │
+ ├── 📁 04_skills_runtime/               # 🔵 [TIER 4: PROCEDURAL MEMORY] Dual Skills & Extracted Tools
+ │   ├── 📊 manifest.jsonl               #   ├── Local RAG catalog of all extracted skills & tools
+ │   ├── 🎯 prompt_skills/               #   ├── Modular agent definitions (YAML frontmatter + SKILL.md)
+ │   ├── 🛠️ extracted_tools/             #   ├── Deterministic tools mined by Files Executive Agent
+ │   │   ├── cli/                        #   │   └── Shell utilities & command wrappers (*.sh)
+ │   │   └── wrappers/                   #   │   └── Python API wrappers & micro-utilities (*.py)
+ │   ├── ⚙️ runtimes/                     #   ├── Master operational scripts & execution hooks
+ │   └── 🛡️ policies/                    #   └── Self-correction heuristics & validation schemas
+ │
+ └── 📁 05_episodic_logs/                # 🔴 [TIER 5: EPISODIC TELEMETRY] Trajectories & RLVR Audits
+     ├── 📊 manifest.jsonl               #   ├── Local RAG catalog of sessions, audits & verifiers
+     ├── 📲 daily_driver_sync/           #   ├── Ingested logs from edge device sessions
+     ├── ⏱️ trajectories/                #   ├── Tri-model traces (Query, Executor, Frontier)
+     ├── 🛑 red_audit_sandbox/           #   ├── Red Auditor evaluations & quarantine reports
+     ├── ⚖️ rlvr_verifiers/              #   ├── Graded assertions & reward signals (+1.0 / -1.0)
+     └── 🧹 hygiene_reports/             #   └── Schema validation logs & broken link audits

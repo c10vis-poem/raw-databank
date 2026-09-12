@@ -1,0 +1,1 @@
+yt-dlp -f "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]/b" --no-write-thumbnail --no-write-info-json --no-write-description --clean-info-json "PASTE_YOUR_LINK_HERE"

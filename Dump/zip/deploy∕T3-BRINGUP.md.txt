@@ -1,0 +1,72 @@
+﻿PROJECT: AESOP infrastructure lane (T3 bring-up). Owner: c10vis-poem.
+Context repos: c10vis-poem/aesop (protocol spec — read README.md,
+ARCHITECTURE.md, RESUME.md, profiles/nav.yaml first), c10vis-poem/Novus-Agenti
+(device/agent layer — read CLAUDE.md SOTU only, don't touch its code).
+Another session is handling the Omni Claw UI build — do NOT touch
+Novus-Agenti code or branches. This lane is infrastructure only.
+
+
+GOAL: stand up tier T3 (home node) per profiles/nav.yaml —
+Jetson Orin Nano Super 8GB = hub (memory backends, gateway, librarian,
+small executive), Rubik Pi (Dragonwing) = desktop-OS + audio/TTS node,
+phone joins over Tailscale.
+
+
+ORDER OF WORK:
+1. TAILSCALE ON PHONE (do first, 10 min):
+   - Install the Tailscale Android APK (Play Store or F-Droid) — NOT the
+     Termux pip/pkg route; the Android app gives the VPN tunnel that
+     Termux traffic rides automatically.
+   - Log in, note the phone's 100.x.y.z tailnet IP.
+   - In Termux: `tailscale status` isn't available (app owns it) — verify
+     instead with `curl http://<any-tailnet-ip>` once a second node exists.
+   - Enable MagicDNS in the admin console so nodes resolve by name.
+
+
+2. JETSON ORIN NANO 8GB — PROCURE + FLASH:
+   Shopping/prep list:
+   - microSD: 128GB+ A2 U3 (256GB preferred — JetPack + models eat space).
+   - The Orin Nano Super Dev Kit needs a ONE-TIME firmware update to boot
+     JetPack 6.x: if the board is new/older firmware, first boot JetPack 5.1.3
+     SD image to update QSPI firmware, OR use a Ubuntu 22.04 x86 host with
+     NVIDIA SDK Manager over USB-C recovery mode. Check firmware version
+     on first boot before assuming.
+   - Flash target: JetPack 6.x "SD Card Image" from developer.nvidia.com
+     (Balena Etcher). No x86 host needed if firmware is already 36.x.
+   - First boot: ubuntu user setup, then:
+     `sudo apt update && sudo apt install -y curl git`
+     `curl -fsSL https://tailscale.com/install.sh | sh && sudo tailscale up`
+   - Install Docker (comes with JetPack) + docker compose.
+   - T3 services to stand up (containers preferred, 8GB RAM budget —
+     this is a HUB not a big-model box):
+       a. Postgres + pgvector (OB1/Open Brain recall memory)
+       b. Vault sync target: bare git repo or Syncthing for ~/vault
+          (canonical markdown; phone's ~/vault syncs here)
+       c. OmniRoute (Node >=20; c10vis-poem/OmniRoute) as the gateway
+       d. LATER, not first pass: onnxruntime + gemma-4-E2B ONNX
+          (executive-small), reasoning-bank
+   - Success criteria: phone can `git push` vault to Jetson over tailnet;
+     Postgres reachable at jetson:5432 from phone; OmniRoute dashboard
+     loads at http://jetson:20128 from phone browser.
+
+
+3. RUBIK PI (Qualcomm Dragonwing) — AFTER Jetson is stable:
+   - Flash per Qualcomm's Rubik Pi docs (Qualcomm Linux / Debian-based
+     image; needs its flashing host tool — follow thundercomm/Qualcomm
+     official docs for the exact image, don't guess).
+   - Join tailnet same as Jetson.
+   - Role per nav.yaml: desktop-os + TTS endpoint (kokoro/sherpa-onnx).
+     sherpa-onnx has aarch64 glibc wheels — plain `pip install sherpa-onnx`
+     should work here (unlike Termux/bionic). Model files: reuse the
+     kokoro-multi-lang-v1.x bundle + Moonshine-base-int8 from the owner's
+     HF mirrors — ONE shared ~/models folder, ABI-agnostic per aesop
+     RESUME.md's shared-model/per-ABI-runtime decision.
+
+
+CONSTRAINTS:
+- Do not push to any Novus-Agenti branch. aesop repo: main only, docs only.
+- No tokens/secrets in any commit. HF auth comes from environment/HF CLI login.
+- If a step's docs conflict with reality (firmware, image names), verify
+  against the official source before flashing — report, don't improvise.
+- Log outcomes back into aesop/RESUME.md (append a dated section) so the
+  next session inherits state.

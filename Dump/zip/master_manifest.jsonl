@@ -1,0 +1,8 @@
+{"repo": "aesop-xi", "formal_name": "Æsop-Xi", "path": "aesop-xi/", "role": "Universal orchestration layer, ethical policy governance & arbitration"}
+{"repo": "novae-xorpus", "formal_name": "NovÆxorpus", "path": "novae-xorpus/", "role": "Hardened universal database, Living Wiki vault & ground truth repository"}
+{"repo": "novus-aexenti", "formal_name": "NovusÆxenti", "path": "novus-aexenti/", "role": "Cognitive MoE reasoning engine (0.8B Triage vs. 9B Executor) & memory flywheel"}
+{"repo": "novaexopia", "formal_name": "Novaexopia", "path": "novaexopia/", "role": "Tool harness runtime, OpenWiki TUI, and MCP capability bridge"}
+{"repo": "raw_database", "formal_name": "Raw database", "path": "raw_database/", "role": "Cold sensory ground truth, raw data ingestion & interceptor extraction zone"}
+{"repo": "horizons-ui", "formal_name": "Horizons-Ui", "path": "horizons-ui/", "role": "Master visual presentation shell, Android Chromium WebView & concierge UI"}
+{"repo": "novus-aesc", "formal_name": "Æsc", "path": "novus-aesc/", "role": "Native system terminal & shell daemon (ADB loopback on 127.0.0.1:5555)"}
+{"repo": "novus-aeyre", "formal_name": "novus-aeyre", "path": "novus-aeyre/", "role": "Native media & sensory ingress daemon (Silero VAD, Moonshine STT, Kokoro TTS)"}

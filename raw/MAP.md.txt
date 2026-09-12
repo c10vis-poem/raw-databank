@@ -1,0 +1,138 @@
+﻿MAP.md — The Master Repository Map
+Exact Living Structure of __NovÆxorpus_LIVING_MASTER_CANON
+__NovÆxorpus_LIVING_MASTER_CANON/
+
+
+│
+
+
+├── 📄 README.md                                          # Master ecosystem entry point & overview
+
+
+├── 📄 MAP.md                                             # This file: Visual navigation map & component ledger
+
+
+├── 📄 00_DEFINITIVE_MASTER_SPECIFICATION_V3_COMPLETE.md  # 10-Section canonical apex authority
+
+
+├── 📄 01_SOVEREIGN_NODE_AND_APK_TOPOLOGY.md              # 3-APK framework & hardware mesh
+
+
+├── 📄 02_DUMBASS_UNIVERSAL_MEMORY_SPEC.md                # #d.u.m.b.a.s.s. & OmniRoute spec
+
+
+├── 📄 03_DUAL_OPERATIONAL_HARNESS_AND_MCP_SPEC.md        # Mode A (CLI) vs. Mode B (Prime)
+
+
+├── 📄 04_ON_DEVICE_INGESTION_AND_W5H_FRAMEWORK.md        # Ingestion pipeline & token markers
+
+
+├── 📄 05_FEDERATED_FILE_TREE_TOPOLOGY_MASTER.md          # Multi-repo topology map
+
+
+├── 📄 RESUME.md                                          # Architectural resume / summary
+
+
+│
+
+
+├── 📁 aesop-xi/                                          # Ethical core & arbitration
+
+
+│   ├── 📄 README_AESOP_XI.md
+
+
+│   └── ⚙️ run_audit.sh                                   # Background daemon for /opt/red-agent/
+
+
+│
+
+
+├── 📁 novus-aexenti/                                     # Cognitive MoE brain (0.8B / 9B)
+
+
+│   └── 📄 README_NOVUS_AEXENTI.md
+
+
+│
+
+
+├── 📁 novaexopia/                                        # Horizons UI, daemons & harness
+
+
+│   └── 📄 README_NOVAEXOPIA.md
+
+
+│
+
+
+├── 📁 vendor-corpora/                                    # Qualcomm FastRPC & Android NDK IPC
+
+
+│   └── 📄 README_VENDOR_CORPORA.md
+
+
+│
+
+
+├── 📁 skills-and-capabilities/                           # AST code graphs & NotebookLM-py
+
+
+│   └── 📄 README_SKILLS_AND_CAPABILITIES.md
+
+
+│
+
+
+├── 📁 data_vault/                                        # 5+1 Cognitive Memory core
+
+
+│   ├── 📄 README_DATA_VAULT.md
+
+
+│   ├── 📁 01_raw_sources/                                # Tier 1: Sensory / cold archive
+
+
+│   ├── 📁 02_wiki_md/                                    # Tier 2: The Living LLM Wiki
+
+
+│   ├── 📁 03_recall_cache/                               # Tier 3: Fast machine retrieval
+
+
+│   ├── 📁 04_skills_runtime/                             # Tier 4: Procedural repertoire
+
+
+│   └── 📁 05_episodic_logs/                              # Tier 5: Telemetry & traces
+
+
+│
+
+
+└── 📁 tools/                                             # Production executable tools
+
+
+    ├── ⚙️ system_housekeeper.sh                          # Zero-trust hygiene sweeper
+
+
+    ├── ⚙️ agent_panel.sh                                 # Terminal TUI dashboard
+
+
+    ├── 🐍 compile_manifest.py                            # Manifest hasher & indexer
+
+
+    ├── 🐍 doc_to_skill_and_tool.py                       # Procedural extraction engine
+
+
+    ├── 🐍 npu_manager.py                                 # UNIX socket model switcher
+
+
+    ├── 📜 export_drive_docs.js                           # Headless drive exporter
+
+
+    ├── 🐍 convert_raw_to_markdown.py                     # Sensory-to-semantic converter
+
+
+    ├── 🐍 generate_jsonl_markers.py                      # Pre-tokenized chunk generator
+
+
+    └── 🐍 log_builder.py                                 # Structured logging engine
