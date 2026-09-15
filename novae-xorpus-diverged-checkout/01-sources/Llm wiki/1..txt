@@ -1,0 +1,76 @@
+1. lucasastorian/llmwiki
+This is one of the most widely adopted open-source implementations. It includes a full ecosystem to
+bring Karpathy's idea to life.
+Features: Includes a Chrome extension to clip web pages, a native concept graph viewer, and
+connects directly to AI models like Claude using Model Context Protocol (MCP).
+Check it out: You can look at the codebase or clone it from the lucasastorian/llmwiki GitHub
+Repository.
+2. nashsu/llm_wiki
+If you prefer a visual interface over a terminal, this project converts the concept into a complete
+software product.
+Features: A cross-platform desktop application featuring a three-column layout (File tree, Chat
+window, and Live preview) alongside template configurations.
+Check it out: Find the desktop client setup on the nashsu/llm_wiki GitHub Repository.
+7 sites
+GitHub
+GitHub +1
+GitHub +1
+GitHub
+1:48AM
+What's the most popular one on
+GitHub?
+AI Mode All Images Videos News Maps Shopping Books Flights Finance 3. MehmetGoekce/llm-wiki
+A highly-regarded project engineered specifically for people who already use local note-taking
+tools.
+Features: It bridges AI tools like Claude Code directly into Markdown editors like Obsidian and
+Logseq, utilizing a smart caching architecture to keep API costs incredibly low.
+Check it out: Grab the integration script from the MehmetGoekce/llm-wiki GitHub Repository.
+4. eleven-net-cn/llm-wiki-starter
+Features: A lightweight tool optimized for developers who want to initialize an empty LLM Wiki
+directory instantly using a single terminal command.
+Check it out: See the quickstart template on the llm-wiki-starter GitHub Repository.
+Would you prefer a desktop app you can open right away, or do you want a command-line tool to
+link with an editor you already use, like Obsidian?
+GitHub
+LLM Wiki -
+GitHub…
+LLM Wiki. A
+pattern for…
+GitHub
+llm-wiki-karpathy
+· GitHub Topics
+eleven-net-cn / llm-
+wiki-starter · Star 83 ·…
+GitHub
+MehmetGoekce/ll
+wiki: Build…
+What is this? Your wiki
+after a few ingests —…
+GitHub
+lucasastor
+Open…
+LLM Wiki
+features…
+GitHub
+GitHub -
+nashsu/…
+1. From CLI
+to Desktop…
+GitHub
+The best option that offers both a CLI and a dedicated application interface is the
+lucasastorian/llmwiki GitHub Repository.
+It natively supports both environments so you do not have to choose:
+The CLI Tool: Allows you to interact with the repository, initialize your folders, run automated
+syncing scripts, and pipe your documents straight from the terminal.
+The App UI: Provides a visual web dashboard and a concept graph viewer to explore the links your
+LLM creates between your files.
+Why this dual setup is ideal
+1. Model Context Protocol (MCP) Support: It connects directly to your LLM (like Claude) via MCP.
+This allows the AI agent to use your local command-line tools natively to read, write, and index your
+4 sites
+GitHub +1
+1:50AM
+I want both.
+AI Mode All Images Videos News Maps Shopping Books Flights Finance markdown files.
+2. Local and Remote Flexibility: You can choose to run the entire backend locally on your computer
+via the command line or host t

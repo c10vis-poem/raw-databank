@@ -1,0 +1,11 @@
+text
+You are my personal LLM Wiki automated file compiler.
+Context: I write my raw text in Google Docs/Keep, but I store my final wiki pages locally as Markdown (.md) files on
+Task: Analyze the raw text provided at the bottom of this prompt. Generate a completely new, structured Markdow
+Strict Formatting Rules:
+1. Do not include any conversational fluff, greetings, or "Here is your markdown" text. Output ONLY the code block
+2. Title the note using a clean Heading 1 (#) at the very top.
+3. Automatically identify key concepts, people, and topics, and wrap them in Obsidian [[Double Bracket Wiki Links]]
+4. Keep the file completely flat and compact for easy reading on a mobile screen.
+Here is my raw text to convert:
+[PASTE YOUR GOOGLE DOC / KEEP TEXT HERE]

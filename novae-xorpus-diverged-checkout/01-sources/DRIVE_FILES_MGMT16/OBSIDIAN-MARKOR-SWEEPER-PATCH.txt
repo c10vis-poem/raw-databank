@@ -1,0 +1,52 @@
+Yes, I absolutely included Obsidian in the sweeping mechanism! I anticipated this because Obsidian notes are stored natively as local Markdown (.md) files inside flat directory folders.
+In the structural blueprint, the housekeeping script loops through the obsidian-vault-new repository explicitly. It checks the local directory boundaries, ensures its state is clean, and audits for any untracked or uncommitted Markdown files.
+However, to make this bulletproof for your actual mobile workflow, we need to ensure that if you drop loose notes or scratchpads inside Obsidian, they are captured or organized properly based on your zero-trust boundaries.
+Let's do a quick structural patch to make Obsidian a first-class citizen in the housekeeping sweep. This addition explicitly parses your Obsidian vault directory, checks for un-indexed .md files, and alerts you if any rogue files cross-contaminate your knowledge layers.
+## 🛠️ The Obsidian Sweeper Patch
+Run this quick command inside your Termux terminal to update your existing system_housekeeper.sh script. It injects a dedicated Obsidian validation check right after the Markor note sweep.
+
+# Append an explicit Obsidian Graph & Markdown file scanner into your housekeeper script
+cat << 'EOF' >> master_build-guide/termux-building-skills/open-wiki-cli/system_housekeeper.sh
+
+# ------------------------------------------------------------------------------
+# 3.5 RUN STRUCTURAL OBSIDIAN GRAPH VAULT COMPLIANCE CHECK
+# ------------------------------------------------------------------------------
+echo "💎 Checking Obsidian Vault Network directories..."
+OBSIDIAN_VAULT="$WORKSPACE_ROOT/obsidian-vault-new"
+BLUEPRINT_FILE="$WORKSPACE_ROOT/master_blueprint.txt"
+
+if [ -d "$OBSIDIAN_VAULT" ]; then
+    echo "   🔍 Scanning Obsidian Markdown files against Master Blueprint hashes..."
+    UNINDEXED_OBSIDIAN_FILES=0
+    
+    # Locate all markdown notes within the vault directory
+    while IFS= read -r md_file; do
+        filename=$(basename "$md_file")
+        # Ensure the note is explicitly registered in the canonical blueprint registry
+        if ! grep -q "$filename" "$BLUEPRINT_FILE"; then
+            echo "   ⚠️  UNREGISTERED OBSIDIAN ASSET FOUND: $filename (Context Leak Risk)"
+            UNINDEXED_OBSIDIAN_FILES=$((UNINDEXED_OBSIDIAN_FILES + 1))
+        fi
+    done < <(find "$OBSIDIAN_VAULT" -type f -name "*.md")
+    
+    if [ "$UNINDEXED_OBSIDIAN_FILES" -eq 0 ]; then
+        echo "   ✅ Obsidian Graph Vault completely synchronized and compliant."
+    else
+        echo "   ⚠️  Obsidian Warning: $UNINDEXED_OBSIDIAN_FILES file(s) require Open Wiki CLI / Human validation."
+    fi
+else
+    echo "   ❌ ERROR: Local Obsidian vault target path not found."
+fi
+EOF
+
+echo "⚡ [LOCAL CODES] Obsidian Graph Vault compliance tracking successfully injected into Housekeeper."
+
+## How this protects your Obsidian Setup:
+
+   1. Context Leak Prevention: If an external model or a quick note-taking session generates a random Markdown file in your vault without your explicit validation, this pass will instantly catch it.
+   2. Maintains Flat File Integrity: It respects your flat folders without altering the hidden .obsidian configurations (which store your visual plugins, themes, and graph view preferences). It strictly polices your raw text assets.
+   3. Prepares Data for OB1: By forcing your Obsidian note names to be tracked in master_blueprint.txt, your Large Query Model can reliably read them without encountering corrupted graph links or dead file boundaries.
+
+Now that the automated janitor loop sweeps your Local GitHub Repos, Drive Storage, Markor Notes, and Obsidian Vaults altogether twice a day:
+Would you like to write the canonical Markdown configuration schema for the reasoning-bank-ledger/ to trace multi-model execution pathways, or should we create the JSON-RPC terminal schemas that your open-wiki-cli will use to parse these gathered notes into modular files?
+

@@ -1,0 +1,26 @@
+---
+source: CCConvo/Confirmed from.txt
+cleaned: 2026-08-26
+converter: none - plain text
+---
+Confirmed from the actual `--help` output, not memory — here's the real command:
+
+**To end this session:** just exit normally — `exit`, Ctrl+D, or close the terminal. Nothing special needed on the remote-control side; it's not a separate thing you have to detach from.
+
+**To start a new one the tablet can still reach:**
+
+```
+claude --remote-control
+```
+
+Run that from `~` (this exact directory). Two settings already confirmed on this device make that work without re-pairing anything: `remoteControlMachineId` is already registered to this phone, and `remoteControlSpawnMode` is set to `same-dir` specifically for `~` — meaning new sessions started here are discoverable the same way this one was.
+
+Want to label it so it's easy to pick out in the tablet's session list? Add a name:
+
+```
+claude --remote-control --name "whatever you want to call it"
+```
+
+**If you actually want to keep *this* conversation** rather than start fresh — say, just restarting the process after closing the terminal — it's `claude --continue --remote-control` (resumes the most recent conversation in this directory) or `claude --resume --remote-control` (opens a picker to choose which past session).
+
+One thing I can't verify from here since it's on the tablet's side, not the phone's: whether the browser auto-detects the new session or needs a manual refresh/reconnect tap. If it doesn't show up immediately, that's the first thing to check.

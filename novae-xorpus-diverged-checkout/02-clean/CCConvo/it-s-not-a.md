@@ -1,0 +1,16 @@
+---
+source: CCConvo/It's not a.txt
+cleaned: 2026-08-26
+converter: none - plain text
+---
+It's not a harness, and it's not the orchestrator — it's the **rules/enforcement layer bolted into a specific harness.**
+
+Same slot Prime Agent's own "Continual Harness" occupies inside Prime Agent — ECC/GateGuard occupies that slot inside Claude Code. It doesn't have an engine of its own (no model-calling loop, no REPL), and it doesn't decide which harness handles a task the way AESOP does — it just constrains and gates what happens *within* whichever harness it's plugged into.
+
+The practical consequence, already true and worth remembering: **it's not portable.** ECC works because it's built on Claude Code's specific hook mechanism (`PreToolUse`, the fact-forcing gate). If you wanted the same guardrails running inside Prime Agent later, you can't carry the plugin over — you'd have to reimplement the rules there, in whatever hook/constraint system Prime Agent exposes. It's harness-internal, not harness-external.
+
+So the three-tier map is now:
+
+- **Harness** — Claude Code, Prime Agent. Swappable, has an engine, has its own rules/state.
+- **Orchestrator/protocol** — AESOP XI. Sits above the harnesses, decides which one runs what, survives any of them getting swapped.
+- **Guardrail layer** — ECC/GateGuard. Sits *inside* one specific harness, enforcing rules there. Not swappable on its own — it belongs to Claude Code the way Continual Harness belongs to Prime Agent.

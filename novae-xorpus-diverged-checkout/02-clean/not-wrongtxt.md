@@ -1,0 +1,18 @@
+---
+source: Not wrongtxt.txt
+cleaned: 2026-08-26
+converter: none - plain text
+---
+Not wrong on the others — verified all five against their real GitHub metadata, not guessed.
+
+Real correction to how I've been thinking about the "3 APKs": they're not three independent apps sharing a repo pattern — it's **one orchestrator UI plus two headless daemons**, functioning as one system:
+
+- **Horizons UI** — the front end. WebSocket layer, embedded Chromium WebView, the LLM chat tile, terminal GUI, a model router with file picker/uploader and cloud hooks, fallback to an OpenRouter server, and houses the nano/smol-agent that runs the dual query/execute tandem against the device NPU and runtime.
+- **Daemon APK #1 (shell)** — registers as an Accessibility Service / on-device assistant specifically to get shell-equivalent device access *without* the Android app sandbox Termux is stuck in.
+- **Daemon APK #2 (speech/vision)** — same permission class (accessibility SDK/API, OS-level), fronts the device agent's speech and vision layer.
+
+That's a real dependency structure, not three parallel builds — Horizons UI is the thing a user touches, and it's useless without both daemons registered and reachable.
+
+One thing worth flagging now rather than later: **Horizons UI has its own model router with an OpenRouter fallback**, separate from OmniRoute and separate from LocalAI's native API. That's a third router candidate in the stack. Worth deciding early whether Horizons UI's router *calls* OmniRoute, or whether they're doing the same job twice — that's exactly the kind of collision AESOP is supposed to catch, and it's cheaper to settle now than after all three APKs exist.
+
+Updating the roadmap doc with the real architecture so the "5 repos" target doesn't read as three interchangeable siblings:

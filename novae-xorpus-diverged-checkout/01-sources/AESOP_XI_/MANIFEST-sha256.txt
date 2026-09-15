@@ -1,0 +1,8 @@
+90c71b29f2f2dfdc548cd997270ffe736a99b01240176d36675fadebcd024f80  Copy of aesop-wiki.md
+658e7a3fd1f3e0c4121c74b7361fd328dbbaabbb7834c53e067926935fa77fc7  Four Core Buckets.txt.txt
+52a15718c09c0df8ca6f4e9962fdce8ecd23518679bc5066b20ab2c4de885d39  How Your Forked Repos (The MCP Tools) Move into the APK.txt
+b95dbe0c33023b6d08b3b075bc28eb3aaeb6fefc24193a9063a21ab6515ac547  Local-first code intelligence graph..txt
+1f715bdf5c03669ea325f97d5e4be2cbcaaf7d7632f7b47d1cfc1feff72da2f0  Red Agent file systems layout..txt
+088f90a533fa3a9a2f3846fe5d6cdb508503899f6f4b3c7bdf9a81ed482088c3  Red agent needs RLVRl.docx
+12ac8b492c0714d6d8e2f468ab0f826cf766a10ea26ae8390a31bca9a2e18ce7  Why You Need an MCP Host (The Bridge).txt
+41cb2d2653219216765c3173df481e2a98e25f02d78ba897f1ef13ec50b5af7c  deploy∕T3-BRINGUP.md.txt

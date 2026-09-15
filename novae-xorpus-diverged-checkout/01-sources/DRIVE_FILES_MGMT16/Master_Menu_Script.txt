@@ -1,0 +1,1 @@
+﻿A master wrapper script is a simple control panel for your phone’s terminal. Instead of remembering and typing multiple commands, you just run one single file. See agent_panel.sh in sync_and_grep_files_layout.md for the full script.

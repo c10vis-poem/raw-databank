@@ -1,0 +1,1 @@
+/data/data/com.termux/files/home/repos/aesop-xi/CLAUDE.md

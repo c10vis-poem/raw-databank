@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><style type='text/css'>html,body{padding:4px 8px 4px 8px;font-family:'sans-serif-regular';}h1,h2,h3,h4,h5,h6{font-family:'sans-serif-condensed';}a{color: #388E3C;text-decoration:underline;}img{height:auto;max-width:100%;max-height: 90vh;margin:auto;}html,body{color:#ffffff;background-color:#303030;}a:visited{color:#dddddd;}blockquote{color:#cccccc;}</style><style>video, img { max-width: 100%; } pre { max-width: 100%; overflow: auto; } table, th, td {  border: 1px solid white; border-collapse: collapse; border-spacing: 0; padding: 6px; } .floatl {float: left;} .clear {clear:both;} button:hover,button:active {filter: invert(1);} button { display: inline-block; box-sizing: border-box; border: none; border-radius: 4px; padding: 0 16px; min-width: 64px; height: 36px; font-family: 'Roboto'; font-size: 14px; font-weight: 500;  line-height: 36px; overflow: hidden; outline: none; vertical-align: middle; text-align: center; text-overflow: ellipsis; text-transform: uppercase; box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); margin: 4px 4px 8px 0px;}    .emojibtn,.fa {font-size:250%; background: transparent; padding: 0px; min-width:0px;}    .sticky {position: sticky; display: inline-block; border: 0px solid white;} body{margin:0;padding:0.5vh 3.5vw} .header_no_underline { text-decoration: none; color: white; } h1 < a.header_no_underline { border-bottom: 2px solid #eaecef; }  h1,h2 { border-bottom: 2px solid #eaecef; } blockquote{padding:0px 14px;border-left:3.5px solid #dddddd;margin:4px 0}p > code { background-color: #D2D2D880; padding: 1.5px 3px; border-radius: 4px; }.video-container > p { margin: 0; }.task-list-item { list-style-type:none; text-indent: -1.4em; } li.task-list-item > pre, li.task-list-item > ul > li { text-indent: 0pt; }p > a { word-break:break-all; }.markor-table-of-contents { border: 1px solid white; border-radius: 2px; } .markor-table-of-contents > h1 { padding-left: 14px; margin-bottom: -8px; border-bottom: 1px solid white; } .markor-table-of-contents-list li { margin-left: -12px; } .markor-table-of-contents-list a { text-decoration: none; }</style><style> 
+html, body { 
+/* 
+font-family: sans-serif-condensed; 
+font-size: 80%; 
+*/ 
+} 
+</style> 
+ 
+<script type="text/javascript"> 
+function onPageLoaded() { 
+/* 
+if ('format-markdown fileext-txt' == 'MarkdownTextConverter') { 
+ window.scrollTo(0, document.body.scrollHeight); 
+} 
+*/ 
+} 
+</script><script> function onPageLoaded_markor_private() {
+
+onPageLoaded(); }
+</script></head>
+<body class='format-markdown fileext-txt' onload='onPageLoaded_markor_private();'>
+
+<!-- USER DOCUMENT CONTENT -->
+
+
+<h1 id="master-execution-router" line="7"><a href="#master-execution-router" class="header_no_underline" line="7">Master Execution Router</a></h1>
+<p line="8">Whenever the user asks to ingest, map, wire, or build a repository:</p>
+<ol line="9">
+<li line="9">NEVER execute raw file reads or grep commands.</li>
+<li line="10">Route the task to the exact ECC skill or Honey sub-agent based on this routing table:
+<ul line="11">
+<li line="11"><strong line="11">Large file/doc ingestion:</strong> Invoke <code line="11">Skill(honey-crush)</code> or <code line="11">Skill(px-reader)</code>.</li>
+<li line="12"><strong line="12">AST / Code Mapping:</strong> Invoke <code line="12">Skill(nexus-mapper)</code> with <code line="12">--file</code> or <code line="12">--dir</code>.</li>
+<li line="13"><strong line="13">Architecture / Multi-Repo Planning:</strong> Invoke <code line="13">Skill(ecc-planner)</code>.</li>
+</ul>
+</li>
+<li line="14">Receive the child skill output, format it, and return the compressed summary</li>
+</ol>
+<ul line="17">
+<li line="17">&mdash; name: orchestrator description: &ldquo;Master workflow router. Automatically routes complex repository ingestion, multi-repo tasks, and AST indexing to ECC and Honey for Devs child skills.&rdquo; allowed-tools: [&ldquo;Skill&rdquo;, &ldquo;Bash&rdquo;] &mdash;  # Master Execution Router Whenever the user asks to ingest, map, wire, or build a repository: 1. NEVER execute raw file reads or grep commands. 2. Route the task to the exact ECC skill or Honey sub-agent based on this routing table:    - <strong line="17">Large file/doc ingestion:</strong> Invoke <code line="17">Skill(honey-crush)</code> or <code line="17">Skill(px-reader)</code>.    - <strong line="17">AST / Code Mapping:</strong> Invoke <code line="17">Skill(nexus-mapper)</code> with <code line="17">--file</code> or <code line="17">--dir</code>.    - <strong line="17">Architecture / Multi-Repo Planning:</strong> Invoke <code line="17">Skill(ecc-planner)</code>. 3. Receive the child skill output, format it, and return the compressed summary.:.txt.</li>
+</ul>
+
+
+<!-- USER DOCUMENT CONTENT END -->
+
+</body></html>

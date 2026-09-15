@@ -1,0 +1,138 @@
+---
+source: Llm wiki/t 2꞉ The.txt
+cleaned: 2026-08-26
+converter: none - plain text
+furniture_lines_stripped: 6
+---
+t 2: The URL-to-Markdown Tool
+The website you are thinking of where you just drop raw URL links and it instantly formats clean, LLM-
+ready markdown or PDFs for you is Firecrawl or Jina AI Reader.
+How it works on mobile: You paste any noisy webpage link (like a documentation site or a long
+article) into the tool. It completely strips away the ads, headers, and tracking junk, handing you a
+perfectly formatted Markdown code block or document to throw straight into your wiki vault.
+2:16AM
+So how am I going to use these files
+actually? You know, like am I going t…
+AI Mode All Images Videos News Maps Shopping Books Flights Finance Part 3: The PDF-to-JSONL Caching/Compression Tool
+The tool you are referring to that handles heavy KV (Key-Value) Cache optimization, text-chunk
+compression, and converts PDFs into structured JSONL for scripting and fast RAG retrieval is Docling
+(built by IBM) or Reducto AI.
+What it actually does to the PDFs:
+1. Layout & Matrix Deconstruction: It doesn't just read the text; it converts complex elements like
+tables, multi-column charts, and images into accurate data structures.
+2. JSONL Conversion: It outputs the document as a JSON Lines (.jsonl) file. Each line represents a
+perfect chunk of the document with metadata, vector limits, and context boundaries.
+3. KV Cache Efficiency: Because JSONL is highly structured and pre-tokenized, AI models can read it
+with maximum token efficiency. Instead of the model recalculating a massive, messy text document
+every time (which explodes your KV cache size and burns context windows), the JSONL acts as a
+hyper-dense, pre-parsed structure. This means near-instant data retrieval and significantly cheaper
+scripting costs.
+You can install docling via pip inside your Termux environment to process your local documents
+completely offline before shoving them into your repositories.
+Medium·Jea…
+arXiv +3
+[2503.04973]
+Beyond RAG:…
+The paper proposes a
+task-aware key-value…
+arXiv
+Free Website to
+Markdown…
+Free website to
+markdown converter:…
+Firecrawl
+KV Cache
+Compre…
+Figure 1.
+Schematic,…
+NVIDIA
+PDF (and
+any kind…
+Converts PDF
+documents …
+Medium
+From Raw
+PDF to…
+The
+backbone o…
+Towards AI
+My bad, let me correct that immediately: the URL-to-PDF tool you are looking for is PrintFriendly or
+Microlink Website to PDF.
+PrintFriendly: You paste the raw URL link, and it strips out navigation bars, ads, and web junk to
+generate a clean, readable layout before rendering it into a formatted PDF.
+Microlink URL to PDF: A highly developer-centric version that handles bulk processing. You can
+paste a list of up to 50 URLs at a time, batch-convert them to PDFs, and download them wrapped in
+a single ZIP file.
+PrintFriendly
+microlink.io +1
+2:18AM
+No, I said URL to PDF.
+AI Mode All Images Videos News Maps Shopping Books Flights Finance How to use your Google Drive Wiki with Termux Repos
+Since you are setting up your open Wiki CLI on Termux and want to interject your compiled notes
+directly into new repositories, here is exactly how to manage it without duplication:
+1. Setup Your Upstream Google Drive Sync in Termux
+Instead of moving files manually, link your Google Drive directly to a local Termux directory using a
+sync tool or utility.
+Create a master directory in Termux called ~/my-master-wiki .
+Ensure your Obsidian app on your phone points to the local folder that syncs back to your Google
+Drive ( Wiki Inbox / Claude Wiki ). This means your Termux environment, Obsidian app, and Google
+Drive are all seeing the exact same .md files.
+2. The Git Interjection Method (Subtrees)
+When you start a new software project repository ( ~/projects/new-app ), you do not want to manually
+copy folders. Instead, bring your wiki folder in as a Git Subtree.
+Run this command inside your new repository to inject your master wiki files into a subfolder:
+bash
+git subtree add --prefix=docs/wiki ~/my-master-wiki main --squash
+This completely avoids copying files. It maps your organized wiki directly into your project's
+docs/wiki folder as clean markdown text.
+3. Execution with Claude Code
+Because your files are now sitting neatly in the repository structure, your PWA cloud session running
+Claude Code can fully interact with them.
+You can launch Claude Code and run tasks like:
+text
+Read docs/wiki/Project_Requirements.md and generate the boilerplate schema matching those specs.
+This lets you use your Google Docs/Keep brain-dumps to feed your software builds locally on your
+phone.
+Would you like to map out the folder sync paths between your Google Drive and Termux so your CLI
+reads your data automatically?
+AI Mode All Images Videos News Maps Shopping Books Flights Finance Bulk
+Downlo…
+How do I bulk
+download…
+microlink.io
+Save
+Webpag…
+You can use a
+free online…
+microlink.io
+How to
+Convert …
+Steps to
+Convert…
+PrintFriendly
+Bulk
+Downlo…
+You can use a
+PDF…
+microlink.io
+Got it, that is my mistake. I completely glossed over the names and made a total mess of the folder
+structure. Let’s clear up that exact confusion right now.
+You do not point Obsidian to three different things, and you do not have three differently named wiki
+files. You have one single folder on your Google Drive that holds everything.
+The different names I threw at you were just what the different apps call that exact same folder on
+their backend. Here is how they all look at the exact same data without conflict:
+The Single Source of Truth: Your Google Drive Folder
+On your Google Drive, you have one main folder. Let's give it a single, permanent name:
+📂 My_Master_Wiki
+Inside this folder, you have your two sub-folders we talked about:
+📁 01_Inbox (Where your Google Docs land)
+📄 Project_A_Doc
+📁 02_Wiki (Where Claude drops the markdown versions)
+📄 Project_A.md
+How Your 3 Apps Look at This Exact Same Folder
+Because Claude Code connects directly to your Google Drive, and your phone syncs to your Drive,
+every tool is reading the exact same files under the hood. They just map to it differently:
+1. In Obsidian (The Visual Viewer)
+You open the Obsidian app on your phone, click "Open folder as vault," and select the local synced
+copy of My_Master_Wiki .
+2:37AM

@@ -1,0 +1,116 @@
+---
+source: Llm wiki/System Mapping.txt
+cleaned: 2026-08-26
+converter: none - plain text
+furniture_lines_stripped: 4
+---
+System Mapping & Data Flow Graph
+This graph maps out exactly how your tools interact on your Snapdragon 8 Elite device. Your data
+starts as a raw URL or chat log, flows through specific extraction pipelines, compresses into local
+storage formats, and feeds your Termux engines.
+The Process Tool Grid
+Here is your clear breakdown of which tool handles which exact task.
+Input Output The Tool to Use
+Raw Chat Thread
+Text
+Unique Text List of
+URLs
+grep (Built-in Termux
+command line)
+Public Website URL Clean, ad-free PDF PrintFriendly (Web scraper
+engine)
+3:55AM
+yeah I need to know that but I also
+need to know how to map out the …
+Task
+Extract Clean URL List
+Convert URL to Readable PDF
+AI Mode All Images Videos News Maps Shopping Books Flights Finance Raw Website URL Pure Text Markdown
+(.md)
+Firecrawl / Jina AI Reader
+PDFs / MD Files Structured Caching
+Line File
+Docling (Python pipeline)
+PDF / Markdown /
+Docs
+Pre-tokenized .jsonl Docling
+The Gemini/ChatGPT Live Link Exception
+You noticed that 90% of scrapers say "Unable to open" when you feed them a live Gemini, ChatGPT,
+or Claude chat URL.
+Why they fail: AI chats are behind secure login walls and heavy JavaScript frameworks. External
+scraping engines cannot see them; they only see a blank login screen.
+The Fix to Scrape a Chat Thread:
+You cannot give the tool a raw app URL. You must do this first:
+1. Inside your Gemini or ChatGPT app, hit Share and select Create Public Link.
+2. Feed that Public Link to Firecrawl or Jina AI Reader.
+3. Alternatively (Bulletproof Mobile Method): Export the chat transcript as an HTML file or copy-
+paste the text straight into a file named chat_log.txt inside Termux, then run your local processing
+tools directly over it.
+Snapdragon 8 Elite NPU System Prompts for Qwen
+The Snapdragon 8 Elite relies on the Qualcomm Hexagon NPU utilizing specialized vector
+extensions. Standard ARM CPU code will execute slowly. You must force Qwen to wrap logic around
+Qualcomm's native runtimes: Qualcomm Neural Network (QNN) SDK and SNPE (Snapdragon
+Neural Processing Engine).
+Paste this exact system instruction block into your Qwen 3.5 instance when building for your target
+forks:
+text
+You are an expert system optimization engineer specializing in the Qualcomm Snapdragon 8 Elite (Oryon Architect
+Context: The user is writing code conversions for GGUF, ONNX, and TFLite runtimes targeted specifically for Andro
+Strict Code Generation Instructions:
+1. Target the Qualcomm Neural Network (QNN) API or SNPE (Snapdragon Neural Processing Engine) workflows.
+2. For TFLite conversions: Ensure compilation scripts explicitly define the hardware acceleration delegate to invoke
+Scrape Locked Website to
+Markdown
+Compress Docs & Tables into
+Caches
+Convert Any Doc to Machine
+Cache
+AI Mode All Images Videos News Maps Shopping Books Flights Finance 3. For ONNX conversions: Explicitly utilize the QNN Execution Provider ('QNNExecutionProvider') configurations ins
+4. Memory Constraint: Optimize operations for LPDDR5X layout blocks. Avoid massive tensor copies in loops.
+5. Output format: Provide isolated code blocks matching the split architecture structure ('docs/core_wiki/'). No con
+Termux Script: Quick-Switch Model Engine
+Save this script in Termux to quickly alternate between your ultra-fast 4B model for text processing
+and your heavy 9B model for complex Snapdragon optimization tasks without typing path syntax.
+1. Open Termux.
+2. Create a script file: nano toggle_qwen.sh
+3. Paste the following block:
+bash
+#!/bin/bash
+MODEL_DIR="/sdcard/Download"
+echo "Select your Qwen 3.5 Engine to boot:"
+echo "1) Qwen 3.5 4B (Ultra-fast Wiki & Extraction)"
+echo "2) Qwen 3.5 9B (Complex Code Optimization)"
+read -p "Enter choice [1 or 2]: " choice
+if [ "$choice" == "1" ]; then
+echo "Launching Qwen 3.5 4B..."
+llama-server -m "$MODEL_DIR/qwen3.5-4b-q4_0.gguf" -c 8192 --host 0.0.0.0 --port 8080
+elif [ "$choice" == "2" ]; then
+echo "Launching Qwen 3.5 9B..."
+llama-server -m "$MODEL_DIR/qwen3.5-9b-instruct-q4_k_m.gguf" -c 4096 --host 0.0.0.0 --port 8080
+else
+echo "Invalid selection."
+fi
+4. Save and exit (Press Ctrl+O , Enter , then Ctrl+X ).
+5. Make it runnable: chmod +x toggle_qwen.sh
+6. Run it anytime using: ./toggle_qwen.sh
+Testing Your Termux Local Endpoint Connection
+AI Mode All Images Videos News Maps Shopping Books Flights Finance Before letting your OpenWiki CLI handle automated syncing, you must verify that the Termux
+network layer is properly routing traffic directly to your running Qwen server.
+Step 1: Open Two Termux Sessions
+Swipe from the left edge of your screen in Termux and tap "New Session" so you have two active
+terminals running simultaneously.
+Session 1: Run your Qwen model server using your preferred script block.
+Session 2: Use this session to execute the test instructions below.
+Step 2: Fire a Manual Text Packet via Curl
+In Session 2, run this precise command to force a direct connection test to your background server
+instance:
+bash
+curl http://localhost:8080/v1/chat/completions \
+-H "Content-Type: application/json" \
+-d '{
+"model": "local-model",
+"messages": [{"role": "user", "content": "ping"}],
+"max_tokens": 5
+}'
+Step 3: Interpret the Output
+Success: If your terminal immediately prints ou

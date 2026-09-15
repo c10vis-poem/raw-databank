@@ -1,0 +1,6 @@
+---
+source: CCConvo/So these other.txt
+cleaned: 2026-08-26
+converter: none - plain text
+---
+So these other pieces of the infrastructure that orchestrate multi-agent swarms like what which ones say they do that in my Fork repos I think I got orca and Lane flow maybe and also isn't open route or something is that what it's called open route are those completely different like if I wanted to use prime agent and with my local weights and then also have it have inference with Claude code/ecc what I need to utilize something else like the Orca or open route stuff or is that what Aesop XI is going to function as and the second part of that question would be as far as the I don't know what you would call it it's not really the runtime is it's the connections layer like the Omni route like if I'm running that does that per side that runs persistent throughout my whole entire ecosystem right and the reason I'm asking is because I was reading local Ai and how that functions and that seem like it would be useful but if that's what or I should say or my question would be or is that what ASAP XI Plus on your route Plus whatever harnesses plus the MPC servers that I use is that what that's going to entail basically would it benefit from having local AI because I the way it reads sounds like something that I really want to connect all three of my apks

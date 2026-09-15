@@ -1,0 +1,6 @@
+---
+source: CCConvo/NovÆgenti.txt
+cleaned: 2026-08-26
+converter: none - plain text
+---
+NovÆgenti Defined (pt.1) is the full understanding of the brand naming and historical symbolism / repo structure and stated intent that session combined with the ass end of this session is going to make up the initial canonical reference material for future development

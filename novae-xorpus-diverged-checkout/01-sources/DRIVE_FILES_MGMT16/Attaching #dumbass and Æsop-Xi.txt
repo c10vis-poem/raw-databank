@@ -1,0 +1,27 @@
+Attach this environment to #dumbass (novae-xorpus) and the Æsop-Xi project. Do this:
+
+1. Clone the universal memory bank (this is #dumbass, not Æsop-Xi):
+   git clone https://github.com/c10vis-poem/novae-xorpus.git ~/novae-xorpus
+
+2. Clone the Æsop-Xi project repo (a consumer of #dumbass, not #dumbass itself):
+   git clone https://github.com/c10vis-poem/aesop-xi.git ~/repos/aesop-xi
+
+3. Mirror this repo's handoff files into novae-xorpus via symlink (not copy):
+   mkdir -p ~/novae-xorpus/projects/aesop-xi
+   ln -sfn ~/repos/aesop-xi/RESUME.md ~/novae-xorpus/projects/aesop-xi/RESUME.md
+   ln -sfn ~/repos/aesop-xi/CLAUDE.md ~/novae-xorpus/projects/aesop-xi/CLAUDE.md
+
+4. Install the same auto-regeneration hook:
+   printf '#!/bin/bash\nbash ~/novae-xorpus/tools/regenerate_masters.sh\n' > ~/repos/aesop-xi/.git/hooks/post-commit
+   chmod +x ~/repos/aesop-xi/.git/hooks/post-commit
+
+5. Read ~/novae-xorpus/AGENTS.md in full before doing anything else — it's the
+   real rules file for #dumbass itself (tool-agnostic, not just for Claude).
+   ~/repos/aesop-xi/CLAUDE.md just points to it.
+
+6. Every session from now on: `git pull` both repos at the start, `git push`
+   both at the end.
+
+Confirm after: run `bash ~/novae-xorpus/tools/regenerate_masters.sh` and check
+that MASTER-RESUME.md / MASTER-CLAUDE.md in ~/novae-xorpus/ actually list
+aesop-xi, not just say so.

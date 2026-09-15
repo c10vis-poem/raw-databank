@@ -1,0 +1,17 @@
+---
+source: CCConvo/Yes — that's.txt
+cleaned: 2026-08-26
+converter: none - plain text
+---
+Yes — that's literally how they describe it, two named parts:
+
+> "Prime Agent is designed around two core abstractions:
+> - The **RLM** (Recursive Language Model) — treats context as variables, tools/subagents as function calls, inside a persistent REPL
+> - The **Continual Harness** — stores supplemental prompts, memories, skill descriptions, and reusable subagent specifications as durable state that Prime Agent can refine through small, evidence-backed updates"
+
+So mapped onto the engine/rules split:
+
+- **RLM** = the engine. The persistent Python control environment that actually runs the loop, calls the model, executes tool/subagent calls.
+- **Continual Harness** = the rules/state layer. Prompts, memories, skill descriptions, subagent specs — the stuff that directs the engine, and can update itself in small evidence-backed steps via `/refine`. Notably, it **never rewrites the immutable base system prompt** — so there's a hard floor under it that self-refinement can't touch, with rollback snapshots if a refinement goes bad.
+
+So Prime Agent isn't just an engine you point your own AESOP XI rules at — it comes with its own rules-layer built in, running the *same idea* AESOP XI is going for (self-improving, evidence-based rule refinement) already. That's worth knowing before you wire AESOP XI on top of it: you may end up with two systems both trying to own "the rules that direct the agent" — Prime Agent's Continual Harness, and your own protocol docs. Not necessarily a conflict, but a real design question for when you get to that phase: does AESOP XI *become* the content inside Prime Agent's Continual Harness, or do the two run as separate, parallel rule layers?

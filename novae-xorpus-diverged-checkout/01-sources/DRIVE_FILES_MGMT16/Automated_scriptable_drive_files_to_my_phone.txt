@@ -1,0 +1,1 @@
+﻿Here is how to set up both parts completely on your phone: the automated script to pull your Drive files into your mobile terminal, and the exact structural logic for your skills.md file so your agents know what to do.
